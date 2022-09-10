@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import CustomTable from "./Table";
+import Button from "@mui/material/Button";
 
 const Import = (props) => {
-    // fill out this component
+  return (
+    <div>
+      <Button variant="contained" color="primary" onClick={props.fetchMakes}>
+        Import
+      </Button>
+      <CustomTable makes={props.makes} deleteMake={props.deleteMake} />;
+    </div>
+  );
+};
 
-    return (
-        <p>Import Component</p>
-    )
-}
-
-export default Import
+export default Import;
